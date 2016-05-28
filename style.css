@@ -1,0 +1,117 @@
+html {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffd9d3;
+  background-image: linear-gradient(#FFFFFF 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.7) 1px, transparent 1px);
+  background-position: center;
+  background-size: 25px 25px, 25px 25px;
+}
+
+#spin {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+}
+
+#box {
+  position: absolute;
+  width: 75%;
+  height: 40%;
+  right: 12.5%;
+  top: calc(30% - 5px);
+  background-color: white;
+  box-shadow: 10px 10px 0px #888888;
+  transition: transform .3s ease-in-out;
+}
+
+#box:hover {
+  transform: scale(1.05);
+}
+
+#name {
+  position: absolute;
+  font-size: 8vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #888888;
+  line-height: 50%;
+  top: 22.5%;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#buttons {  
+  position: absolute;
+  bottom: -50%;
+  height: 100%;
+  width: 100%;
+  display:table-cell;
+}
+#buttons > a {
+  position: absolute;
+  height: 50%;
+  width: 25%;
+  text-align: center;
+  font-size: 8vw;
+}
+
+a#link1 { background: lightblue;      left: 0%; }
+a#link2 { background: #ffd9d3;    left: 25%; }
+a#link3 { background: lightblue;      left: 50%; }
+a#link4 { background: #ffd9d3;    left: 75%; }
+
+.group:before, .group:after { content: ""; display: table; }
+.group:after { clear: both; }
+.group { zoom: 1; }
+
+.fa {
+  color: white;
+  position:relative;
+  top: 35%;
+}
+
+@media screen and (min-width: 900px) {
+  #box {
+    position: relative;
+    right: 0%;
+    top: calc(30% - 5px);
+    width: 675px;
+    margin: 0 auto;
+  }
+
+  #name {
+    font-size: 71px;
+    position: absolute;
+    top: 20%;
+  }
+
+  #buttons > a {
+    font-size: 71px;
+  }
+
+  .fa {
+    position:relative;
+    top: 28%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  #name {
+    position: absolute;
+    top: 20%;
+  }
+  .fa {
+    position:relative;
+    top: 28%;
+  }
+}
